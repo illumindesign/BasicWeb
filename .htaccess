@@ -1,0 +1,9 @@
+# FORWARD ALL TRAFFIC THROUGH BASICWEB ==========
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  #RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  Rewritecond %{REQUEST_FILENAME} !/c
+  RewriteRule .* basicweb.php [L]
+</IfModule>
+# END BASICWEB FORWARDING =======================
